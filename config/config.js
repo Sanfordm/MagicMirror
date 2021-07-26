@@ -43,15 +43,24 @@ let config = {
 			position: "top_left"
 		},
 		{
-			module: "calendar",
-			header: "US Holidays",
-			position: "top_left",
+			module: "MMM-CalendarWeek",
+			position: "bottom_bar",	// This can be any of the regions. Best results in bottom region.
 			config: {
+				colored: false,
+				coloredSymbolOnly: false,
+				maximumNumberOfDays: 5,
+				fetchInterval: 3600000, //1hour
 				calendars: [
 					{
-						symbol: "calendar-check",
-						url: "webcal://www.calendarlabs.com/ical-calendar/ics/76/US_Holidays.ics"					}
-				]
+						url: 'https://calendar.google.com/calendar/ical/mattsanford258%40gmail.com/private-eaec5db50639f57f32db9bd94eecd748/basic.ics',
+						symbol: 'calendar'
+						// auth: {
+						// 	user: 'username',
+						// 	pass: 'superstrongpassword',
+						// 	method: 'basic'
+						// }
+					},
+				],
 			}
 		},
 		{
@@ -72,7 +81,7 @@ let config = {
 				clocks: [
 					{
 						title: "Japan", // Too long of a title could cause bad text align.
-						timezone: "Asia/Japan", //When omitted, Local time will be displayed. 
+						timezone: "Asia/Tokyo", //When omitted, Local time will be displayed. 
 						flag: "jp", // If you'd like a flag from the standard library 
 					},
 					{
@@ -89,6 +98,11 @@ let config = {
 						title: "Singapore",
 						timezone: "Asia/Singapore",
 						flag: "sg",
+					},
+					{
+						title: "California",
+						timezone: "America/Los_Angeles",
+						flag: "us"
 					}
 				]
 			},
@@ -108,19 +122,56 @@ let config = {
 			  useAnimatedIcons: false,
 			  animateMainIconOnly: false,
 			  concise: false,
-			  forecastLayout: "table"
+			  forecastLayout: "table",
+			  showSummary: false,
+			  //config for hourly forecast
+			  hourlyForecastInterval: 1,
+			  maxHourliesToShow: 12,
+			  showDailyForecast: false
 			}
 		  },
 		  {
-			module: "MMM-UVIndex",
-			position: "top_right",  // This can be any of the regions.
-										// Best results in left or right regions.
+			module: "MMM-OpenWeatherMapForecast",
+			header: "Forecast",
+			position: "top_right",
+			classes: "default everyone",
+			disabled: false,
 			config: {
-				latitude: 30.5433 , //simply Google these values for the location you are interested in knowing the UV Index
-				longitude: -97.6482, 
-				accessToken: "27dffc132cfbda5e8943d02a5d252996", //You can get one for free at https://www.openuv.io
+			  apikey: "8966de05e2e2d6ed21a1d181f9901a7e",
+			  latitude: "30.5433",
+			  longitude: "-97.6482", 
+			  updateInterval: 15,     
+			  iconset: "2c",
+			  useAnimatedIcons: true,
+			  animateMainIconOnly: false,
+			  concise: false,
+			  forecastLayout: "tiled",
+			  showSummary: false,
+			  //config for hourly forecast
+			  showHourlyForecast: false,
+			  showCurrentConditions: false,
+			  maxDailiesToShow: 5,
+			  requestDelay: 1000
 			}
-		}
+		  },
+		  {
+			module: "MMM-BurnIn",
+			position: "bottom_bar", // whatever, doesn't render anything
+			config: {
+			   updateInterval: 15, // in Minutes
+			   invertDuration: 5 // in Seconds
+			}
+        }
+		//   {
+		// 	module: "MMM-UVIndex",
+		// 	position: "top_right",  // This can be any of the regions.
+		// 								// Best results in left or right regions.
+		// 	config: {
+		// 		latitude: 30.5433 , //simply Google these values for the location you are interested in knowing the UV Index
+		// 		longitude: -97.6482, 
+		// 		accessToken: "27dffc132cfbda5e8943d02a5d252996", //You can get one for free at https://www.openuv.io
+		// 	}
+		// }
 	]
 };
 
