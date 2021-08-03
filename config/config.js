@@ -63,13 +63,13 @@ let config = {
 				],
 			}
 		},
-		{
-			module: 'MMM-ModuleScheduler',
-			config: {
-				// SHOW ALL MODULES AT 06:00am AND HIDE AT 12:00am EVERY DAY
-				global_schedule: {from: '0 6 * * *', to: '0 24 * * *' },
-			}
-		},
+		// {
+		// 	module: 'MMM-ModuleScheduler',
+		// 	config: {
+		// 		// SHOW ALL MODULES AT 06:00am AND HIDE AT 12:00am EVERY DAY
+		// 		global_schedule: {from: '0 6 * * *', to: '0 24 * * *' },
+		// 	}
+		// },
 		{
 			module: 'MMM-Worldclock',
 			position: 'top_left', // This can be any of the regions, best in top_left or top_right regions
@@ -154,14 +154,14 @@ let config = {
 			  requestDelay: 1000
 			}
 		  },
-		  {
-			module: "MMM-BurnIn",
-			position: "bottom_bar", // whatever, doesn't render anything
-			config: {
-			   updateInterval: 15, // in Minutes
-			   invertDuration: 5 // in Seconds
-			}
-        }
+		//   {
+		// 	module: "MMM-BurnIn",
+		// 	position: "bottom_bar", // whatever, doesn't render anything
+		// 	config: {
+		// 	   updateInterval: 15, // in Minutes
+		// 	   invertDuration: 5 // in Seconds
+		// 	}
+        // }
 		//   {
 		// 	module: "MMM-UVIndex",
 		// 	position: "top_right",  // This can be any of the regions.
