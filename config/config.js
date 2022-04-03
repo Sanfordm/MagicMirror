@@ -39,37 +39,10 @@ let config = {
 
 	modules: [
 		{
+			//default clock module. matches system time.
 			module: "clock",
 			position: "top_left"
 		},
-		// {
-		// 	module: "MMM-CalendarWeek",
-		// 	position: "bottom_bar",	// This can be any of the regions. Best results in bottom region.
-		// 	config: {
-		// 		colored: false,
-		// 		coloredSymbolOnly: false,
-		// 		maximumNumberOfDays: 5,
-		// 		fetchInterval: 3600000, //1hour
-		// 		calendars: [
-		// 			{
-		// 				url: 'https://calendar.google.com/calendar/ical/mattsanford258%40gmail.com/private-eaec5db50639f57f32db9bd94eecd748/basic.ics',
-		// 				symbol: 'calendar'
-		// 				// auth: {
-		// 				// 	user: 'username',
-		// 				// 	pass: 'superstrongpassword',
-		// 				// 	method: 'basic'
-		// 				// }
-		// 			},
-		// 		],
-		// 	}
-		// },
-		// {
-		// 	module: 'MMM-ModuleScheduler',
-		// 	config: {
-		// 		// SHOW ALL MODULES AT 06:00am AND HIDE AT 12:00am EVERY DAY
-		// 		global_schedule: {from: '0 6 * * *', to: '0 24 * * *' },
-		// 	}
-		// },
 		{
 			module: 'MMM-Worldclock',
 			position: 'top_left', // This can be any of the regions, best in top_left or top_right regions
@@ -107,9 +80,10 @@ let config = {
 				]
 			},
 		},
+		//Weather current condition in F
 		{
 			module: "MMM-OpenWeatherMapForecast",
-			header: "Weather",
+			header: "Current Weather",
 			position: "top_right",
 			classes: "default everyone",
 			disabled: false,
@@ -119,15 +93,35 @@ let config = {
 			  longitude: "-104.977630", 
 			  updateInterval: 15,     
 			  iconset: "2c",
-			  useAnimatedIcons: false,
+			  useAnimatedIcons: true,
 			  animateMainIconOnly: false,
 			  concise: false,
 			  forecastLayout: "table",
 			  showSummary: false,
-			  //config for hourly forecast
-			  hourlyForecastInterval: 1,
-			  maxHourliesToShow: 12,
-			  showDailyForecast: false
+			  showHourlyForecast: false,
+			}
+		  },
+		  //Weather current condition in C
+		{
+			module: "MMM-OpenWeatherMapForecast",
+			header: "",
+			position: "top_right",
+			classes: "default everyone",
+			disabled: false,
+			config: {
+			  apikey: "c68b0292de25113d28b225481cfb19f2",
+			  latitude: "39.903000",
+			  longitude: "-104.977630", 
+			  updateInterval: 15,     
+			  iconset: "2c",
+			  units: "metric",
+			  useAnimatedIcons: true,
+			  animateMainIconOnly: false,
+			  concise: true,
+			  forecastLayout: "table",
+			  showSummary: false,
+			  showHourlyForecast: false,
+			  showExtraCurrentConditions: false,
 			}
 		  },
 		  {
