@@ -76,6 +76,11 @@ let config = {
 						title: "California",
 						timezone: "America/Los_Angeles",
 						flag: "us"
+					},
+					{
+						title: "Texas",
+						timezone: "America/Austin",
+						flag: "us"
 					}
 				]
 			},
@@ -123,7 +128,8 @@ let config = {
 			  showSummary: false,
 			  showHourlyForecast: false,
 			  showExtraCurrentConditions: false,
-			  showDailyForecast: false
+			  showDailyForecast: false,
+			  requestDelay: 1000
 			}
 		  },
 		  //weather forecast
@@ -147,8 +153,9 @@ let config = {
 			  //config for hourly forecast
 			  showHourlyForecast: false,
 			  showCurrentConditions: false,
-			  maxDailiesToShow: 5,
-			  requestDelay: 1000
+			  showExtraCurrentConditions: false,
+			  maxDailiesToShow: 7,
+			  requestDelay: 2000
 			}
 		  },
 		//   {
