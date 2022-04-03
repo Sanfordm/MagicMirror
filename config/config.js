@@ -42,27 +42,27 @@ let config = {
 			module: "clock",
 			position: "top_left"
 		},
-		{
-			module: "MMM-CalendarWeek",
-			position: "bottom_bar",	// This can be any of the regions. Best results in bottom region.
-			config: {
-				colored: false,
-				coloredSymbolOnly: false,
-				maximumNumberOfDays: 5,
-				fetchInterval: 3600000, //1hour
-				calendars: [
-					{
-						url: 'https://calendar.google.com/calendar/ical/mattsanford258%40gmail.com/private-eaec5db50639f57f32db9bd94eecd748/basic.ics',
-						symbol: 'calendar'
-						// auth: {
-						// 	user: 'username',
-						// 	pass: 'superstrongpassword',
-						// 	method: 'basic'
-						// }
-					},
-				],
-			}
-		},
+		// {
+		// 	module: "MMM-CalendarWeek",
+		// 	position: "bottom_bar",	// This can be any of the regions. Best results in bottom region.
+		// 	config: {
+		// 		colored: false,
+		// 		coloredSymbolOnly: false,
+		// 		maximumNumberOfDays: 5,
+		// 		fetchInterval: 3600000, //1hour
+		// 		calendars: [
+		// 			{
+		// 				url: 'https://calendar.google.com/calendar/ical/mattsanford258%40gmail.com/private-eaec5db50639f57f32db9bd94eecd748/basic.ics',
+		// 				symbol: 'calendar'
+		// 				// auth: {
+		// 				// 	user: 'username',
+		// 				// 	pass: 'superstrongpassword',
+		// 				// 	method: 'basic'
+		// 				// }
+		// 			},
+		// 		],
+		// 	}
+		// },
 		// {
 		// 	module: 'MMM-ModuleScheduler',
 		// 	config: {
@@ -77,7 +77,7 @@ let config = {
 			// See 'Configuration options' for more information.
 				timeFormat: 'hh:mm A', //Global time format, as defined in moment.js format()
 				style: 'left', // Which way do you want the flag and description from the clock? choices are 'top', 'left','right','bottom'
-				offsetTimezone: "America/Chicago", // Timezone you want to show the difference from. null, "", or omitted from config will be UTC.
+				offsetTimezone: "America/Denver", // Timezone you want to show the difference from. null, "", or omitted from config will be UTC.
 				clocks: [
 					{
 						title: "Japan", // Too long of a title could cause bad text align.
@@ -114,9 +114,9 @@ let config = {
 			classes: "default everyone",
 			disabled: false,
 			config: {
-			  apikey: "8966de05e2e2d6ed21a1d181f9901a7e",
-			  latitude: "30.5433",
-			  longitude: "-97.6482", 
+			  apikey: "c68b0292de25113d28b225481cfb19f2",
+			  latitude: "39.903000",
+			  longitude: "-104.977630", 
 			  updateInterval: 15,     
 			  iconset: "2c",
 			  useAnimatedIcons: false,
@@ -137,9 +137,9 @@ let config = {
 			classes: "default everyone",
 			disabled: false,
 			config: {
-			  apikey: "8966de05e2e2d6ed21a1d181f9901a7e",
-			  latitude: "30.5433",
-			  longitude: "-97.6482", 
+			  apikey: "c68b0292de25113d28b225481cfb19f2",
+			  latitude: "39.903000",
+			  longitude: "-104.977630", 
 			  updateInterval: 15,     
 			  iconset: "2c",
 			  useAnimatedIcons: true,
