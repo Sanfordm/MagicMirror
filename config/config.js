@@ -99,6 +99,7 @@ let config = {
 			  forecastLayout: "table",
 			  showSummary: false,
 			  showHourlyForecast: false,
+			  showDailyForecast: false
 			}
 		  },
 		  //Weather current condition in C
@@ -122,8 +123,10 @@ let config = {
 			  showSummary: false,
 			  showHourlyForecast: false,
 			  showExtraCurrentConditions: false,
+			  showDailyForecast: false
 			}
 		  },
+		  //weather forecast
 		  {
 			module: "MMM-OpenWeatherMapForecast",
 			header: "Forecast",
